@@ -66,6 +66,12 @@
         doc.setFillColor(28, 41, 51);
         doc.rect(0, 220, 60, 60, 'F');
        
+        // Suponiendo que imageData, fecha, nombreCliente y apellidoCliente son valores que se obtienen de algún formulario
+        const imageData = '...'; // Asegúrate de proporcionar la ruta correcta de la imagen
+        const fecha = '2024-03-25'; // Por ejemplo, la fecha actual
+        const nombreCliente = 'Juan';
+        const apellidoCliente = 'Pérez';
+
         doc.addImage(imageData, 'JPEG', 10, 8, 106, 34);
         doc.setFontSize(14);
         doc.setFontType("bold");
@@ -73,7 +79,7 @@
         doc.text("WISOLAR CALL CENTER NICA 2023", 12, 50);
         
         var partes = fecha.split("-");
-         var fechaDoc = partes[2] + '-' + partes[1] + '-' + partes[0];
+        var fechaDoc = partes[2] + '-' + partes[1] + '-' + partes[0];
         const docpdf = nombreCliente + apellidoCliente + fechaDoc + '.pdf';
         doc.save(docpdf);
     </script>
